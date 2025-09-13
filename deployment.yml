@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bms-app
+  name: gopi-bms
   labels:
     app: bms
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: bms
+      app: gopi-bms
   template:
     metadata:
       labels:
-        app: bms
+        app: gopi-bms
     spec:
       containers:
-      - name: bms-container
-        image: kastrov/bms:latest  # Replace with your Docker image
+      - name: gopi-bms-container
+        image: gopinand9988/capstone
         ports:
-        - containerPort: 3000  # Replace with the port your app runs on
+        - containerPort: 3000  
