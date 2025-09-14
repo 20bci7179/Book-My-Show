@@ -5,6 +5,7 @@ COPY package*.json ./
 RUN npm install postcss@8.4.21 postcss-safe-parser@6.0.0 --legacy-peer-deps
 RUN npm install --legacy-peer-deps
 COPY . .
+RUN nom install
 
 # Stage 2: Runtime image
 FROM node:18
